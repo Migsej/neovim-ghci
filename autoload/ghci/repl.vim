@@ -83,6 +83,7 @@ function! ghci#repl#reload() abort
         call ghci#maker#write_update([])
 
         call ghci#repl#send(':reload')
+        call ghci#repl#send(':! clear')
     endif
 endfunction
 
