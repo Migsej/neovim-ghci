@@ -82,8 +82,8 @@ function! ghci#repl#reload() abort
         " Truncate file, so that we don't show stale results while recompiling
         call ghci#maker#write_update([])
 
-        call ghci#repl#send(':reload')
         call ghci#repl#send(':! clear')
+        call ghci#repl#send(':reload')
     endif
 endfunction
 
